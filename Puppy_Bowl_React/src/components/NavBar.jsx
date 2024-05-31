@@ -1,12 +1,26 @@
-import React from "react";
-export default function navbar() {
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AppBar, Toolbar, Button } from '@mui/material';
+
+const NavBar = () => {
+    const navigate = useNavigate();
+
+    const goToHome = () => {
+        navigate('/');
+    };
+
+    const goToNewPlayerForm = () => {
+        navigate('/new-player');
+    };
+
     return (
-        <nav>
-            <ul>
-               <li><p>Hi</p></li>
-               <li><p>Hello</p></li>
-               <li><p>Hola</p></li>
-            </ul>
-        </nav>
-    )
-}
+        <AppBar position="static" sx={{ height: '100px' }}>
+            <Toolbar>
+                <Button color="inherit" onClick={goToHome}>Home</Button>
+                <Button color="inherit" onClick={goToNewPlayerForm}>Add Player</Button>
+            </Toolbar>
+        </AppBar>
+    );
+};
+
+export default NavBar;

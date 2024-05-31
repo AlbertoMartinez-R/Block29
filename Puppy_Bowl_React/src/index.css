@@ -1,0 +1,40 @@
+/* Global styles */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* General element styles */
+h1, h3 {
+    color: #333;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Form styles */
+form {
+    width: 100%;
+    margin-top: 8px;
+}
+
+input {
+    margin-bottom: 8px;
+}
+
+button {
+    margin-top: 16px;
+}
